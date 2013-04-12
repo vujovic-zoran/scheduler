@@ -1,0 +1,15 @@
+/* 
+    Document   : style
+    Created on : Apr 12, 2013, 4:30:50 AM
+    Author     : zoran
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+#main-menu { margin: 0 auto; width: 960px; height: 20px;}
+#main-menu ul { list-style: none; margin: 0 auto;}
+#main-menu ul li { float: left; list-style: none;}
+#main-menu a { color: white; text-decoration: none; font-weight: bold; margin: 20px;}

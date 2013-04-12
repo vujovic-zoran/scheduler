@@ -1,0 +1,114 @@
+2013-04-05 08:25:38 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => Group
+    [Aro0.foreign_key] => 5
+)
+"
+Request URL: /users/add
+Stack Trace:
+#0 /var/www/scheduler/lib/Cake/Model/Behavior/AclBehavior.php(91): AclNode->node(Array)
+#1 /var/www/scheduler/lib/Cake/Model/Behavior/AclBehavior.php(109): AclBehavior->node(Object(User), Array, 'Aro')
+#2 [internal function]: AclBehavior->afterSave(Object(User), true, Array)
+#3 /var/www/scheduler/lib/Cake/Utility/ObjectCollection.php(132): call_user_func_array(Array, Array)
+#4 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#5 /var/www/scheduler/lib/Cake/Event/CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#6 /var/www/scheduler/lib/Cake/Model/Model.php(1764): CakeEventManager->dispatch(Object(CakeEvent))
+#7 /var/www/scheduler/app/Controller/UsersController.php(43): Model->save(Array)
+#8 [internal function]: UsersController->add()
+#9 /var/www/scheduler/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#10 /var/www/scheduler/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/scheduler/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#12 /var/www/scheduler/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-04-05 08:28:02 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`scheduler`.`users`, CONSTRAINT `users_ibfk_3` FOREIGN KEY (`group_id`) REFERENCES `groups` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+Request URL: /users/add
+Stack Trace:
+#0 /var/www/scheduler/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /var/www/scheduler/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `sc...', Array)
+#2 /var/www/scheduler/lib/Cake/Model/Datasource/DboSource.php(1008): DboSource->execute('INSERT INTO `sc...')
+#3 /var/www/scheduler/lib/Cake/Model/Model.php(1736): DboSource->create(Object(User), Array, Array)
+#4 /var/www/scheduler/app/Controller/UsersController.php(43): Model->save(Array)
+#5 [internal function]: UsersController->add()
+#6 /var/www/scheduler/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#7 /var/www/scheduler/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 /var/www/scheduler/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#9 /var/www/scheduler/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-04-05 08:28:27 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => Group
+    [Aro0.foreign_key] => 1
+)
+"
+Request URL: /users/add
+Stack Trace:
+#0 /var/www/scheduler/lib/Cake/Model/Behavior/AclBehavior.php(91): AclNode->node(Array)
+#1 /var/www/scheduler/lib/Cake/Model/Behavior/AclBehavior.php(109): AclBehavior->node(Object(User), Array, 'Aro')
+#2 [internal function]: AclBehavior->afterSave(Object(User), true, Array)
+#3 /var/www/scheduler/lib/Cake/Utility/ObjectCollection.php(132): call_user_func_array(Array, Array)
+#4 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#5 /var/www/scheduler/lib/Cake/Event/CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#6 /var/www/scheduler/lib/Cake/Model/Model.php(1764): CakeEventManager->dispatch(Object(CakeEvent))
+#7 /var/www/scheduler/app/Controller/UsersController.php(43): Model->save(Array)
+#8 [internal function]: UsersController->add()
+#9 /var/www/scheduler/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#10 /var/www/scheduler/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/scheduler/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#12 /var/www/scheduler/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-04-07 13:04:33 Error: [MissingActionException] Action UsersController::initDB() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'initDB',
+)
+Request URL: /users/initDB
+Stack Trace:
+#0 /var/www/scheduler/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/scheduler/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/scheduler/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-04-12 04:37:08 Error: [MissingControllerException] Controller class AboutController could not be found.
+Exception Attributes: array (
+  'class' => 'AboutController',
+  'plugin' => NULL,
+)
+Request URL: /about
+Stack Trace:
+#0 /var/www/scheduler/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-12 04:45:11 Error: [MissingControllerException] Controller class BusinesController could not be found.
+Exception Attributes: array (
+  'class' => 'BusinesController',
+  'plugin' => NULL,
+)
+Request URL: /busines/add
+Stack Trace:
+#0 /var/www/scheduler/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-12 04:45:21 Error: [MissingControllerException] Controller class BusinesController could not be found.
+Exception Attributes: array (
+  'class' => 'BusinesController',
+  'plugin' => NULL,
+)
+Request URL: /busines/add
+Stack Trace:
+#0 /var/www/scheduler/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-12 04:45:26 Error: [MissingControllerException] Controller class BusinesController could not be found.
+Exception Attributes: array (
+  'class' => 'BusinesController',
+  'plugin' => NULL,
+)
+Request URL: /busines/add
+Stack Trace:
+#0 /var/www/scheduler/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-12 04:45:33 Error: [MissingControllerException] Controller class BusinesController could not be found.
+Exception Attributes: array (
+  'class' => 'BusinesController',
+  'plugin' => NULL,
+)
+Request URL: /busines/add
+Stack Trace:
+#0 /var/www/scheduler/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
