@@ -9,6 +9,11 @@
 root { 
     display: block;
 }
+.login 
+{
+	color: #d1d1d1;
+	float: right;
+}
 #main-menu { margin: 0 auto; width: 960px; height: 20px;}
 #main-menu ul { list-style: none; margin: 0 auto;}
 #main-menu ul li { float: left; list-style: none;}

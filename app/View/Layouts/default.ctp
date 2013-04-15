@@ -24,7 +24,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 <head>
 	<?php echo $this->Html->charset(); ?>
 	<title>
-		<?php //echo $cakeDescription ?>:
+		<?php //echo $cakeDescription ?>
 		<?php echo $title_for_layout; ?>
 	</title>
 	<?php
@@ -41,6 +41,21 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 <body>
 	<div id="container">
 		<div id="header">
+			
+			<?php 
+			if($this->Session->read('Auth.User'))
+			{					   
+				if($this->Session->read('Auth.User')) 
+					
+				echo $this->Html->link('logout', array('controller' => 'users', 'action' =>'logout'), array('class' => 'login')); 
+				echo '<b style="float: right; margin: 0 10px;">' . $this->Session->read('Auth.User.username').'</b> ';
+			}
+			else
+			{
+			 echo $this->Html->link('Login ',array('controller' => 'users', 'action' =>'login'), array('class' => 'login'));                    
+			}	
+			?>
+			
 			<h1>Scheduler</h1>
 			<div id="main-menu">
 				<ul>

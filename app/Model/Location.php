@@ -6,6 +6,8 @@ App::uses('AppModel', 'Model');
  * @property Country $Country
  */
 class Location extends AppModel {
+	
+public $order = "name";
 
 /**
  * Validation rules

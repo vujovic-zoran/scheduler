@@ -42,7 +42,7 @@ class UsersController extends AppController {
 			$this->User->create();
 			if ($this->User->save($this->request->data)) {
 				$this->Session->setFlash(__('The user has been saved'));
-				$this->redirect(array('action' => 'index'));
+				$this->redirect('/');
 			} else {
 				$this->Session->setFlash(__('The user could not be saved. Please, try again.'));
 			}
@@ -115,7 +115,8 @@ class UsersController extends AppController {
 	}
 
 	public function logout() {
-		//Leave empty for now.
+		$this->Auth->logout(); 
+        $this->redirect('/');  
 	}
 	
 	public function beforeFilter() {

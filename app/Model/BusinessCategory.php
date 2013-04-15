@@ -6,6 +6,7 @@ App::uses('AppModel', 'Model');
  * @property Business $Business
  */
 class BusinessCategory extends AppModel {
+public $order = "name";
 
 /**
  * Validation rules

@@ -49,8 +49,9 @@ class BusinessesController extends AppController {
 				$this->Session->setFlash(__('The business could not be saved. Please, try again.'));
 			}
 		}
+		$userId = $this->Auth->user('id');
 		$businessCategories = $this->Business->BusinessCategory->find('list');
-		$this->set(compact('businessCategories'));
+		$this->set(compact('businessCategories', 'userId'));
 	}
 
 /**
